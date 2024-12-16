@@ -38,12 +38,13 @@ int main(){
 	}
 	
 	//VERIFICAÇÃO DE VITÓRIA
+	//CUIDADO TODOS OS CHARACTERES SÃO V NO MOMENTO
 	
 	int venceuLinhas(){
 		for(i = 0; i < 3; i++){
 			for(j = 0; i < 2; i++){
 				if(jogo[i][j] == jogo[i][j+1]){
-				venceu++;
+					if(jogo[i][j] == 'o' || jogo[i][j] == 'x'){venceu++;}
 				}
 			}
 			if(venceu == 3){
@@ -59,7 +60,7 @@ int main(){
 		for(i = 0; i < 3; i++){
 			for(j = 0; j < 2; j++){
 				if(jogo[j][i] == jogo[j+1][i]){
-					venceu++;
+					if(jogo[i][j] == 'o' || jogo[i][j] == 'x'){venceu++;}
 				}
 			}
 			if(venceu == 3){
@@ -74,7 +75,7 @@ int main(){
 	int venceuDiagPri(){
 		for(i = 0; i < 2; i++){
 			if(jogo[i][i] == jogo[i+1][i+i]){
-			venceu++;
+				if(jogo[i][j] == 'o' || jogo[i][j] == 'x'){venceu++;}
 			}
 		}
 		if(venceu == 3){
@@ -89,7 +90,7 @@ int main(){
 	int venceuDiagSec(){
 		for(i = 0; i < 2; i++){
 			if(jogo[i][3 - i - 1] == jogo[i + 1][3 - i - 2]){
-				venceu++;
+				if(jogo[i][j] == 'o' || jogo[i][j] == 'x'){venceu++;}
 			}
 		}
 		if(venceu == 3){
