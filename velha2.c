@@ -22,14 +22,11 @@ int main(){
 	
 	int validCoor(int x, int y){
 		if(x >= 0 && x < 3){
-			if(y >= 0 && y < 3 && jogo[x][y] == 'v'){
+			if(y >= 0 && y < 3 && jogo[x][y] == 'v')
 				return 1;
-			}
-		} else {
-			return 0;
 		}
+			return 0;
 	}
-	
 	void vezQuem(){
 		if(vez == 1){
 			printf("  Vez do X!\n");
@@ -125,17 +122,17 @@ int main(){
 	}
 	
 	void bemVindo(){
-		printf("Bem vindo a Terminal da velha!");
+		printf("Bem vindo a Terminal da velha!\n");
 	}
 	
 	void input(){
 		int jogadaX;
 		int jogadaY;
 		
-		printf("Digite o eixo X da sua jogada!");
+		printf("Digite o eixo X da sua jogada!\n");
 		scanf("%d", &jogadaX);
 		
-		printf("Agora o eixo Y!");
+		printf("Agora o eixo Y!\n");
 		scanf("%d", &jogadaY);
 		
 		if(validCoor(jogadaX, jogadaY)){
@@ -156,9 +153,9 @@ int main(){
 		if(fimDeJogo == 1){
 			printf("Fim de Jogo!");
 			if(vez == 1){
-				printf("%c venceu!", j1);
+				printf("%cvenceu!", j1);
 			} else {
-				printf("%c venceu!", j2);
+				printf("%cvenceu!", j2);
 			}
 		} else {
 			renderJogo();
